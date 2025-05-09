@@ -31,7 +31,7 @@ rl.question("Masukkan angka pertama: ", (angka1) => {
           hasil = "Operator tidak dikenali!";
       }
 
-      console.log(`Hasil: ${hasil} dari fauzi dan rezky update`);
+      console.log(`Hasil: ${hasil} dari fauzi dan rezky update berhasil`);
       rl.close();
     });
   });
