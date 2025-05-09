@@ -1,16 +1,19 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
 name: Kalkulator CI
 
-on: 
-  push:
-    branches: [ "main" ]
+on: [push, pull_request]
 
 jobs:
-  test:
-
+  run-kalkulator:
     runs-on: ubuntu-latest
     steps:
-    - name: Salah YAML
-    - run: echo "error"
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Jalankan kalkulator dengan input simulasi
+        run: |
+          echo -e "10\n+\n5" | node Calculator.js
