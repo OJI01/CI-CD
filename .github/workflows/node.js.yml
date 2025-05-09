@@ -16,4 +16,4 @@ jobs:
 
       - name: Jalankan kalkulator dengan input simulasi
         run: |
-          echo -e "10\n+\n5" | node calculator.js
+          echo -e "10\n+\n5" | node Calculator.js
